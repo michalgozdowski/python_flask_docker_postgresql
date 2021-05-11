@@ -49,7 +49,7 @@ curl 127.0.0.1:8080/store
 </html>
 ```
 
-# GET, PUT, DELETE
+### GET, PUT, DELETE
 Nginx is setup to deny GET, PUT and DELETE requests. To test if the data is properly written to database, remove following line from the nginx/nginx.conf:
 ```
 limit_except POST {deny all;}
