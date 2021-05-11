@@ -48,10 +48,10 @@ def add_product():
          db.session.rollback()
          return {"error": "Uniqe key name already in the database, database rollback"}
 
-@app.route('/store/<product_name>', methods=['GET','PUT','DELETE'])
-def handle_product(product_name):
-    product = Product.query.get_or_404(product_name)
- 
+@app.route('/store/<name>', methods=['GET','PUT','DELETE'])
+def handle_product(name):
+    product = Product.query.filter(Product.name==name).first()
+
     if request.method == 'GET':
       result = {
             "name": product.name,
