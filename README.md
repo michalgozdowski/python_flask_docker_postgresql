@@ -66,7 +66,7 @@ curl 127.0.0.1:8080/store
 
 Or for one product only:
 ```
-curl 127.0.0.1:8080/store/<product_id>
+curl 127.0.0.1:8080/store/<name>
 ```
 
 With nginx config changed, script is accepting PUT and DELETE requests as well. 
