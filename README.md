@@ -37,6 +37,17 @@ E.g.:
 ```
 curl -X POST -H "Content-type: application/json" -d '{"name": "Nissan Datsun 280Z", "category": "Cars", "price": 100000 }' '127.0.0.1:8080/store'
 ```
+Application is allowing only POST requests, so when GET you will see:
+```
+curl 127.0.0.1:8080/store
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>nginx/1.19.10</center>
+</body>
+</html>
+```
 
 # GET, PUT, DELETE
 Nginx is setup to deny GET, PUT and DELETE requests. To test if the data is properly written to database, remove following line from the nginx/nginx.conf:
